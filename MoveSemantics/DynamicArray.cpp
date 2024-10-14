@@ -61,6 +61,20 @@ MyArray::MyArray(MyArray&& obj)
 	cout << "Move constructor" << endl;
 }
 
+MyArray& MyArray::operator=(MyArray&& obj)
+{
+	if (this == &obj)
+	{
+		return *this;
+	}
+	delete[]ptr;
+	obj.size = 0;
+	ptr = obj.ptr;
+	obj.ptr = nullptr;
+	cout << "Move =" << endl;
+	return *this;
+}
+
 
 
 void MyArray::Input()

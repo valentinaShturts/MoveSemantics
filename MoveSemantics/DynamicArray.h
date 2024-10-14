@@ -13,7 +13,7 @@ public:
 	~MyArray();
 	MyArray& operator=(const MyArray& obj); // operator=
 	MyArray(MyArray&& obj); //move constructor
-
+	MyArray& operator=(MyArray&& obj);
 
 	void Input();// rand
 	void Output();// вывод на консоль

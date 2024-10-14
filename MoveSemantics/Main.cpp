@@ -11,8 +11,13 @@ void main()
 	a.Input();
 	a.Output();
 
-	MyArray rez = f1(a);
+	MyArray b(5); // constructor 1 param
+	b.Input();
+	b.Output();
 
-	rez.Output();
+	//MyArray rez = f1(move(a));
+	b = move(a);
+	//rez.Output();
+	b.Output();
 	a.Output();
 }
